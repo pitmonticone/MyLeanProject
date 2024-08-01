@@ -21,10 +21,10 @@ jobs:
         if: always()
         run: |
           # Find Lean files with lines longer than 100 characters, excluding URLs
-          ! (find MyNewProject -name "*.lean" -type f -exec grep -E -H -n '^.{101,}$' {} \; | grep -v -E 'https?://')
+          ! (find MyLeanProject -name "*.lean" -type f -exec grep -E -H -n '^.{101,}$' {} \; | grep -v -E 'https?://')
 
       - name: Don't 'import Mathlib', use precise imports
         if: always()
         run: |
           # Ensure no file imports the entire Mathlib, promoting precise imports instead
-          ! (find MyNewProject -name "*.lean" -type f -print0 | xargs -0 grep -E -n '^import Mathlib$')
+          ! (find MyLeanProject -name "*.lean" -type f -print0 | xargs -0 grep -E -n '^import Mathlib$')

@@ -1,1 +1,1 @@
-import MyNewProject.Example
+import MyLeanProject.Example
