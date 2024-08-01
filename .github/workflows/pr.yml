@@ -22,7 +22,7 @@ jobs:
         run: ~/.elan/bin/lake exe cache get
 
       - name: Build project
-        run: ~/.elan/bin/lake build Project
+        run: ~/.elan/bin/lake build MyNewProject
 
       - name: Build blueprint and copy to `docs/blueprint`
         uses: xu-cheng/texlive-action@v2

@@ -60,6 +60,8 @@ Lean projects.
 
 To tailor this template to your specific project, you need to:
 
+- [`lint.yml`](.github/workflows/lint.yml): Find and replace `Project` with your actual
+project name.
 - [`pr.yml`](.github/workflows/pr.yml):
     - Find and replace `Project` with your actual project name.
     - Select the default branch of your project repository (e.g. `main` or `master`) to
@@ -71,12 +73,6 @@ project code.
 - [`lakefile.lean`](lakefile.lean): Find and replace `Project` with your actual project name.
 - [`Project.lean`](Project.lean): Rename the main file and the imports
 to match your actual project name.
-
-After making these changes, run the following command to update the project configuration and get started:
-
-```bash
-lake update
-```
 
 ## Blueprint
 
